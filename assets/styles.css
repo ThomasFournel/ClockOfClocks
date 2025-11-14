@@ -1,0 +1,55 @@
+body {
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main {
+    display: flex;
+}
+
+.clock {
+    height: 3dvw;
+    width: 3dvw;
+    background-color: #161616;
+    border: 0.2dvw solid #2e2e2e;
+}
+
+.hand {
+    height: 0.1dvw;
+    background: #e0ff55;
+
+    top: 50%;
+    left: 50%;
+    translate: 0% 50%;
+    position: relative;
+
+    width: 50%;
+    transform-origin: center left;
+    transition: rotate 500ms;
+}
+
+.hand:nth-child(1) {
+    rotate: 135deg;
+}
+.hand:nth-child(2) {
+    rotate: 270deg;
+}
+
+
+.digit {
+    display: grid;
+    grid-template:
+        repeat(6,1fr) /
+        repeat(4,0fr);
+    gap: 0.05dvw;
+}
+
+.separator {
+        display: grid;
+    grid-template:
+        repeat(6,1fr) /
+        repeat(1,0fr);
+    gap: 0.05dvw;
+}
